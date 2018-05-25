@@ -1,5 +1,5 @@
 /* @flow */
-import * as React from 'react'
+import * as React from 'preact-compat'
 import defaultFormatter from './defaultFormatter'
 import dateParser from './dateParser'
 

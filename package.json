@@ -1,13 +1,13 @@
 {
-  "name": "react-timeago",
+  "name": "react-timeago-preact",
   "version": "4.1.9",
-  "description": "A simple Time-Ago component for ReactJs",
+  "description": "A simple Time-Ago component for ReactJs, ported to Preact",
   "main": "lib/index.js",
   "scripts": {
     "cpflow": "find ./src -name '*.js' -not -path '*/__*' | while read filepath; do cp $filepath `echo $filepath | sed 's/\\/src\\//\\/lib\\//g'`.flow; done",
     "babel": "babel src/ --out-dir lib/",
     "example": "browserify -t babelify --debug examples/simple/index.js -o examples/simple/bundle.js",
-    "build": "npm run babel && npm run cpflow && npm run example",
+    "build": "npm run babel && npm run cpflow",
     "prepublish": "npm run build",
     "test": "jest --coverage"
   },
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/naman34/react-timeago.git"
+    "url": "https://github.com/dhamaniasad/react-timeago.git"
   },
   "keywords": [
     "React",
@@ -36,7 +36,8 @@
   },
   "homepage": "https://github.com/nmn/react-timeago",
   "peerDependencies": {
-    "react": "^15.0.0 || ^16.0.0"
+    "preact": "^8.2.7",
+    "preact-compat": "^3.18.0"
   },
   "devDependencies": {
     "babel-cli": "^6.14.0",
@@ -56,9 +57,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^22.4.3",
     "prettier": "1.12.0",
-    "react": "^16.3.1",
-    "react-addons-test-utils": "^15.3.0",
-    "react-dom": "^16.3.1"
+    "react-addons-test-utils": "^15.3.0"
   },
   "dependencies": {},
   "prettier": {
